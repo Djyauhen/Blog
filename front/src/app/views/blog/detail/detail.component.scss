@@ -1,0 +1,334 @@
+.detail {
+  .container {
+    padding-top: 80px;
+    padding-bottom: 120px;
+
+    .detail-card {
+
+      .detail-header {
+        margin-bottom: 60px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        color: #B9D5FD;
+
+        a {
+          text-decoration: none;
+          font-family: "Montserrat", sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          color: #B9D5FD;
+
+          &:first-child {
+            margin-right: 8px;
+          }
+
+          &:last-child {
+            margin-left: 8px;
+            color: #709FDC;
+            font-family: "Montserrat", sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+          }
+        }
+      }
+
+      .detail-title {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 60px;
+
+        .detail-title-text {
+          max-width: 607px;
+
+          .detail-title-text-title {
+            color: #709FDC;
+            font-family: "Lora", sans-serif;
+            font-size: 38px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+            margin-bottom: 40px;
+          }
+
+          .detail-title-text-description {
+            color: #709FDC;
+            font-family: "Montserrat", sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+          }
+        }
+
+        .detail-title-image {
+          width: 527px;
+          height: 320px;
+          border-radius: 5px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+    }
+
+    .detail-content {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      .detail-content-main {
+        max-width: 818px;
+
+        .detail-content-text {
+          margin-bottom: 60px;
+        }
+
+        .detail-content-repost {
+          display: flex;
+          align-items: center;
+          margin-bottom: 120px;
+
+          .detail-content-repost-title {
+            color: #709FDC;
+            font-family: "Montserrat", sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 130%;
+            margin-right: 20px;
+          }
+
+          .detail-content-repost-socials {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 86px;
+
+            a {
+              cursor: pointer;
+            }
+          }
+        }
+
+        .detail-comments {
+          max-width: 854px;
+
+          .detail-comments-title {
+            color: #709FDC;
+            font-family: 'Lora', sans-serif;
+            font-size: 38px;
+            font-weight: 400;
+          }
+
+          .detail-comments-count {
+            margin-top: 20px;
+            margin-bottom: 40px;
+
+            color: #071739;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+          }
+
+          .user-comment {
+            .logged {
+              margin-top: 20px;
+
+              color: #071739;
+              font-family: 'Montserrat', sans-serif;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
+
+              a {
+                color: #709FDC;
+              }
+            }
+
+            .user-comment-block {
+              margin-top: 40px;
+              display: flex;
+              flex-direction: column;
+
+              textarea {
+                display: flex;
+                width: 818px;
+                height: 248px;
+                padding: 20px 64px 20px 20px;
+                box-sizing: border-box;
+                border-radius: 3px;
+                border: 2px solid #709FDC;
+
+                color: #A8ABA7;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 130%;
+              }
+
+              .button {
+                margin-top: 20px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-sizing: border-box;
+                max-width: 422px;
+                padding: 15px 40px;
+
+                border-radius: 5px;
+                border: 1px solid transparent;
+                background: #709FDC;
+                cursor: pointer;
+
+                color: #FFF;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+              }
+            }
+          }
+
+          .detail-comment-items {
+            max-width: 854px;
+            margin-top: 60px;
+            margin-bottom: 60px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+
+            .detail-comment-item {
+              .detail-comment-item-header {
+                display: flex;
+                margin-bottom: 15px;
+
+                .detail-comment-item-image {
+                  width: 60px;
+                  height: 60px;
+                  border: 2px solid #709FDC;
+                  box-sizing: border-box;
+                  border-radius: 50px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  overflow: hidden;
+                  background: #B9D5FD;
+                  margin-right: 26px;
+                }
+
+                .detail-comment-item-user {
+                  .detail-comment-item-user-name {
+                    color: #709FDC;
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 18px;
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                  }
+
+                  .detail-comment-item-date {
+                    color: #BEBEBE;
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 14px;
+                    font-weight: 600;
+                  }
+                }
+              }
+
+              .detail-comment-item-text {
+                color: #071739;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 140%;
+                margin-bottom: 40px;
+              }
+
+              .detail-comment-item-actions {
+                display: flex;
+                gap: 15px;
+
+                .detail-comment-item-actions-item {
+                  display: flex;
+                  align-items: center;
+
+                  span {
+                    color: #071739;
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 600;
+                    margin-right: 3px;
+                  }
+
+                  svg {
+                    cursor: pointer;
+                  }
+
+                  &.actions-true {
+
+                    span {
+                      color: #709FDC;
+                    }
+
+                    svg {
+                      path {
+                        stroke: #709FDC;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .detail-comments-load {
+            display: flex;
+            align-items: center;
+            color: #709FDC;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            cursor: pointer;
+
+            span {
+              width: 20px;
+              height: 20px;
+              margin-left: 10px;
+            }
+          }
+
+        }
+      }
+
+      .detail-articles {
+        padding-top: 60px;
+
+        .detail-articles-title {
+          color: #709FDC;
+          font-family: "Lora", sans-serif;
+          font-size: 26px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 130%;
+          margin-bottom: 20px;
+        }
+
+        .detail-articles-item {
+          margin-bottom: 60px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

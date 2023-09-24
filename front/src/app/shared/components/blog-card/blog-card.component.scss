@@ -1,0 +1,59 @@
+.blog-card {
+  position: relative;
+  width: 292px;
+  height: 571px;
+
+  .blog-card-topic {
+    position: absolute;
+    top: 10px;
+    right: 9px;
+    padding:10px 18px;
+    color: #709FDC;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    border-radius: 5px;
+    background: #FFF;
+  }
+
+  .blog-card-image {
+    width: 291px;
+    height: 291px;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .blog-card-title {
+    color: #709FDC;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+
+  .blog-card-text {
+    color: #071739;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+  }
+
+  .blog-link {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: #709FDC;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration-line: underline;
+    cursor: pointer;
+  }
+}

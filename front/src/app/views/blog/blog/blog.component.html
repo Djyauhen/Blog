@@ -1,0 +1,84 @@
+<div class="blog">
+  <div class="container">
+    <div class="blog-title">
+      Блог
+    </div>
+
+    <div class="blog-head">
+      <div class="blog-applied-filters">
+        <div class="blog-applied-filter" *ngFor="let appliedFilter of appliedFilters">
+          <span>
+            {{appliedFilter.name}}
+          </span>
+          <a (click)="removeAppliedFilter(appliedFilter)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+              <line x1="0.935531" y1="1.15002" x2="12.9563" y2="13.1708" stroke="#709FDC" stroke-linecap="round"/>
+              <line x1="12.9236" y1="1.12984" x2="0.902784" y2="13.1507" stroke="#709FDC" stroke-linecap="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="blog-sorting" [class.open]="sortingOpen">
+        <div class="blog-sorting-head" (click)="toggleSorting()">
+          <span>Фильтр</span>
+          <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10.0003 14.5C9.41693 14.5 8.83359 14.275 8.39193 13.8334L2.95859 8.40003C2.71693 8.15837 2.71693 7.75837 2.95859 7.5167C3.20026 7.27503 3.60026 7.27503 3.84193 7.5167L9.27526 12.95C9.67526 13.35 10.3253 13.35 10.7253 12.95L16.1586 7.5167C16.4003 7.27503 16.8003 7.27503 17.0419 7.5167C17.2836 7.75837 17.2836 8.15837 17.0419 8.40003L11.6086 13.8334C11.1669 14.275 10.5836 14.5 10.0003 14.5Z"
+              fill="#2C2C2C"/>
+          </svg>
+        </div>
+        <div class="blog-sorting-body" *ngIf="sortingOpen">
+          <div class="blog-sorting-item"
+               [class.active]="activeParams.categories.includes(sortingOption.url)"
+               (click)="sort(sortingOption.url)"
+               *ngFor="let sortingOption of sortingOptions">{{sortingOption.name}}
+            <span *ngIf="!activeParams.categories.includes(sortingOption.url)">+</span>
+            <span *ngIf="activeParams.categories.includes(sortingOption.url)">-</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-cards">
+      <blog-card *ngFor="let article of articlesCards" [article]="article"></blog-card>
+    </div>
+
+
+    <div class="pagination" *ngIf="pages.length > 1">
+      <div class="pagination-arrow"
+           (click)="openPrevPage()"
+           [class.disabled]="activeParams.page ? activeParams.page === 1 : true">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <path d="M15 7L10 12L15 17" stroke="#000000" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+          </g>
+        </svg>
+      </div>
+
+      <div class="pagination-pages">
+        <a class="pagination-page"
+           (click)="openPage(page)"
+           [class.active]="this.activeParams.page ? this.activeParams.page === page : (page === 1)"
+           *ngFor="let page of pages">{{page}}</a>
+      </div>
+      <div class="pagination-arrow"
+           (click)="openNextPage()"
+           [class.disabled]="activeParams.page ? activeParams.page === pages.length : false">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <path d="M10 7L15 12L10 17" stroke="#000000" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+          </g>
+        </svg>
+
+
+      </div>
+    </div>
+  </div>
+</div>
